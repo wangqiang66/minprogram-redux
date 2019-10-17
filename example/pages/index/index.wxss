@@ -1,0 +1,177 @@
+body {
+  margin: 0px;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.s-block{
+  font-size: 24rpx;
+  width:100%;
+  display: flex;
+  height: 60rpx;
+  border-bottom: 1rpx solid rgba(53, 53, 53, 0.08);
+  background: #fff;
+  align-items: center;
+  
+}
+
+.s-img{
+  padding-left: 30rpx;
+  padding-right: 10rpx;
+  width:28rpx;
+  height: 22rpx;
+}
+
+.apply-swiper{
+  flex:1;
+  color: #F18F01;
+  height:60rpx;
+}
+
+.s-item{
+  height: 60rpx;
+}
+
+.inner-item{
+  line-height: 60rpx;
+}
+
+.banner-box{
+  width:100%;
+  background: #fff;
+}
+
+.banner-wrapper{
+  width: 100%;
+  height: 300rpx;
+}
+
+.banner-img{
+  width: 100%;
+  height: 300rpx;
+}
+
+.banner-swiper{
+    width:100%; 
+    height: 300rpx;
+}
+
+.banner-swiper image{
+    width:100%;
+    height:100%;
+}
+
+.loan-wrapper{
+  margin-bottom: 20rpx;
+  width:100%;
+  background: #fff;
+}
+
+.fun-wrapper{
+  width: 250rpx;
+  height: 176rpx;
+}
+
+.fun-info{
+  display: flex;
+  width:100%;
+  padding-bottom: 78rpx;
+  align-items: center;
+  flex-direction: column;
+  font-size: 28rpx;
+}
+
+.fun-img{
+  width:300rpx;
+  height:220rpx;
+  margin-top: 40rpx;
+}
+
+.fun-name{
+  font-size: 34rpx;
+  color:#353535;
+  margin-top: 10rpx;
+}
+
+.fun-cname {
+  font-size: 30rpx;
+  color: #353535;
+  margin-top: 10rpx;
+}
+
+.btn-apply{
+  width: 280rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 34rpx;
+  margin-top: 30rpx;
+}
+
+.service-block{
+  width:100%;
+  height: 200rpx;
+  background: #fff;
+  display: flex;
+  margin-bottom: 40rpx;
+}
+
+.f-info{
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:250rpx;
+  border-right: 1rpx solid #E5E5E5;
+}
+
+.f-img{
+  width:72rpx;
+  height: 72rpx;
+  margin-bottom: 10rpx;
+}
+
+.more-img{
+  width: 150rpx;
+  height: 70rpx;
+}
+
+.message-block{
+  background-color: #fff; 
+  color: #a0a0a0;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom:1rpx solid rgba(53, 53, 53, 0.08);
+  font-size: 24rpx;
+}
+
+/*消息通知*/
+
+.message-position {
+  position: relative;
+}
+
+.message-tips {
+  width: 30rpx;
+  height: 30rpx;
+  background: red;
+  border-radius: 50%;
+  color: #fff;
+  position: absolute;
+  top: -22rpx;
+  right: -15rpx;
+  text-align: center;
+  line-height: 30rpx;
+  font-size: 18rpx;
+}
+
+.exceed {
+  width: 50rpx;
+  border-radius: 45%;
+  right: -22rpx;
+}
+
+.f-margin {
+  margin-top: -10rpx;
+}

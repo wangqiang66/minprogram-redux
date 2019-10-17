@@ -1,0 +1,17 @@
+{
+  "name": "minprogram-redux-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-promise-middleware": "^6.1.0",
+    "redux-thunk": "^2.3.0"
+  }
+}

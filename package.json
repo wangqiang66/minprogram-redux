@@ -1,0 +1,30 @@
+{
+  "name": "@ddjf/minprogram-redux",
+  "version": "1.0.0",
+  "description": "miniprogram-redux",
+  "author": "wangqiang",
+  "main": "lib/index",
+  "contributors": [
+    {
+      "name": "wangqiang",
+      "email": "wangqiang@ddjf.com.cn"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "wangqiang",
+      "email": "wangqiang@ddjf.com.cn"
+    }
+  ],
+  "keywords": [
+    "miniprogram redux"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "redux": "^4.0.1"
+  },
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 3.0.0"
+  }
+}

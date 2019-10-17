@@ -1,0 +1,5 @@
+<view>
+  <view>中文</view>
+  <view>EN</view>
+  <view>{{ language['WELCOME_TEXT'] }}</view>
+</view>
