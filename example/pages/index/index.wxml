@@ -1,5 +1,7 @@
 <view>
-  <view>中文</view>
-  <view>EN</view>
-  <view>{{ language['WELCOME_TEXT'] }}</view>
+  <view class="row">
+    <text class="flex1 padding-small text-center border" data-type="zh_cn" bindtap="switchTab">中文</text>
+    <text class="flex1 padding-small text-center border" data-type="en_us" bindtap="switchTab">EN</text>
+  </view>
+  <view class="padding-normal-t">{{ language['WELCOME_TEXT'] }}</view>
 </view>

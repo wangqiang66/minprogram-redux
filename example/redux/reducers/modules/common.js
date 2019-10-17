@@ -7,7 +7,7 @@ import languageText from '../../../illn/index.js'
 import { LANGUAGE_TYPE_UPDATE } from '../../types/index'
 
 const defaultLanguageType = 'zh_cn'
-const defaultLanguage = languageText['defaultLanguageType']
+const defaultLanguage = languageText[defaultLanguageType]
 
 export const language = (state = defaultLanguage, action) => {
   switch (action.type) {
