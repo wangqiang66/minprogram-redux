@@ -1,6 +1,6 @@
 {
   "name": "@ddjf/minprogram-redux",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "miniprogram-redux",
   "author": "wangqiang",
   "main": "lib/index",
