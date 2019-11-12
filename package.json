@@ -21,8 +21,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "lint": "eslint src test/unit",
-    "pretest": "npm run lint",
+    "lint": "eslint lib test/unit",
     "test": "jest",
     "coverage": "codecov"
   },
@@ -36,9 +35,15 @@
     "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "codecov": "^3.5.0",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3"
   },
   "engines": {
     "node": ">= 8.0.0",

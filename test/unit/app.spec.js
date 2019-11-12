@@ -9,11 +9,11 @@ describe('App', () => {
   it('setApp', () => {
     const data = 111
     setApp(data)
-    expect(getApp().toBe(data))
+    expect(getApp()).toBe(data)
   })
   it('setApp', () => {
     const data = {}
     setApp(data)
-    expect(getApp().toBe(data))
+    expect(getApp()).toEqual(data)
   })
 })

@@ -3,18 +3,23 @@
  * author  : wq
  * update  : 2019/11/12 11:32
  */
+const path = require('path')
 
 module.exports = {
-  rootDir: path.resolve(__dirname, './'),
+  rootDir: path.resolve(__dirname),
   coverageDirectory: './test/coverage/',
   collectCoverage: true,
   testURL: 'http://localhost',
-  global: {
+  testMatch: [`<rootDir>/test/unit/**/*.js`],
+  globals: {
     wx: true,
     dd: true,
     my: true
   },
   transform: {
-    '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
-  }
+    '^.+\\.js$': '<rootDir>/node_modules/babel-jest'
+  },
+  transformIgnorePatterns: [
+    '/node_modules/'
+  ]
 }
