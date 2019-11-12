@@ -20,8 +20,25 @@
     "miniprogram redux"
   ],
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint src test/unit",
+    "pretest": "npm run lint",
+    "test": "jest",
+    "coverage": "codecov"
+  },
   "devDependencies": {
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-transform-react-display-name": "^7.2.0",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0"
   },
   "engines": {
     "node": ">= 8.0.0",

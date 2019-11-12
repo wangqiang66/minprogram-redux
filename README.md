@@ -50,7 +50,8 @@ const stateNeedOptions = false
 /**
  * mapStateToData: Function(state, options) 需要用到的state数据
  * mapDispatchToPage Function 需要调用的redux更新状态
- * stateNeedOptions 如果状态需要使用onLoad的options参数，在stateNeedOptions设置为true
+ * stateNeedOptions 如果状态需要使用onLoad的options参数，在stateNeedOptions设置为false 
+ *   由于小程序是启动的时候将所有的页面的初始化都加载了，所以这个值只能为false，设置true，初始化的数据不会更新
  */
 Page(connect(mapStateToData, mapDispatchToPage, stateNeedOptions)({
   ...
