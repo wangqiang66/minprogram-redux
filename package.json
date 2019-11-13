@@ -22,6 +22,9 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint lib test/unit",
+    "prebuild": "rimraf ./lib && mkdirp ./lib",
+    "build:watch": "babel src --out-dir lib -w",
+    "build": "babel src --out-dir lib",
     "test": "jest",
     "coverage": "codecov"
   },

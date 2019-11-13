@@ -3,7 +3,7 @@
  * author  : wq
  * update  : 2019/11/12 15:23
  */
-import shallowEqual, { debounce, updateState } from '../../lib/shallowEqual'
+import shallowEqual, { debounce, updateState } from '../../src/shallowEqual'
 
 describe('ShallowEqual', () => {
   it('ShallowEqual', () => {

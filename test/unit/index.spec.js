@@ -4,7 +4,7 @@
  * update  : 2019/11/12 18:04
  */
 import { combineReducers, createStore } from 'redux'
-import { Provider, connect } from '../../lib/index'
+import { Provider, connect } from '../../src/index'
 
 const LANGUAGE_TYPE_UPDATE = 'LANGUAGE_TYPE_UPDATE'
 

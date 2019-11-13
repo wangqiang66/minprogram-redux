@@ -3,7 +3,7 @@
  * author  : wq
  * update  : 2019/11/12 14:23
  */
-import { setApp, getApp } from '../../lib/app'
+import { setApp, getApp } from '../../src/app'
 
 describe('App', () => {
   it('setApp', () => {

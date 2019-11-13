@@ -3,7 +3,7 @@
  * author  : wq
  * update  : 2019/11/12 15:15
  */
-import Targets from '../../lib/Targets'
+import Targets from '../../src/Targets'
 
 describe('Targets', () => {
   it('Wechat Target', () => {

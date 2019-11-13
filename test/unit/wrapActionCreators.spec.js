@@ -3,7 +3,7 @@
  * author  : wq
  * update  : 2019/11/12 15:24
  */
-import wrapActionCreators from '../../lib/wrapActionCreators'
+import wrapActionCreators from '../../src/wrapActionCreators'
 
 describe('WrapActionCreators', () => {
   it("WrapActionCreators Params Function", () => {

@@ -3,8 +3,8 @@
  * author  : wq
  * update  : 2019/11/12 15:15
  */
-import Provider from '../../lib/Provider'
-import { getStore } from '../../lib/store'
+import Provider from '../../src/Provider'
+import { getStore } from '../../src/store'
 
 describe('Provider', () => {
   it('Provider Store Error', () => {

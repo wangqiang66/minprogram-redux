@@ -3,8 +3,8 @@
  * author  : wq
  * update  : 2019/11/12 15:14
  */
-import connect from '../../lib/connect'
-import { setStore } from '../../lib/store'
+import connect from '../../src/connect'
+import { setStore } from '../../src/store'
 
 // 这个需要配合Provide一起测试
 describe('Connect', () => {

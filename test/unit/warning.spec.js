@@ -3,7 +3,7 @@
  * author  : wq
  * update  : 2019/11/12 15:24
  */
-import warning from '../../lib/warning'
+import warning from '../../src/warning'
 
 describe('Warning', () => {
   beforeEach(() => {
