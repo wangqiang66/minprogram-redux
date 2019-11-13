@@ -9,10 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "redux": "^4.0.1",
-    "redux-logger": "^3.0.6",
-    "redux-promise-middleware": "^6.1.0",
-    "redux-thunk": "^2.3.0",
-    "@ddjf/minprogram-redux": "^1.0.1"
+    "@ddjf/minprogram-redux": "^1.0.7"
   }
 }

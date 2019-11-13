@@ -2,9 +2,14 @@
 # yarn lockfile v1
 
 
-"@ddjf/minprogram-redux@^1.0.1":
-  version "1.0.1"
-  resolved "http://10.1.108.96:7003/@ddjf%2fminprogram-redux/-/minprogram-redux-1.0.1.tgz#e6a0a6651f598b58abe33aece1446dbb87711bef"
+"@ddjf/minprogram-redux@^1.0.7":
+  version "1.0.7"
+  resolved "http://10.1.108.96:7003/@ddjf%2fminprogram-redux/-/minprogram-redux-1.0.7.tgz#d22ae7084e45127d811b24074bc018b0128de38c"
+  dependencies:
+    redux "^4.0.1"
+    redux-logger "^3.0.6"
+    redux-promise-middleware "^6.1.0"
+    redux-thunk "^2.3.0"
 
 deep-diff@^0.3.5:
   version "0.3.8"

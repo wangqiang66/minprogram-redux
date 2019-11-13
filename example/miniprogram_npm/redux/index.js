@@ -4,7 +4,7 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {} }; __MODS__[
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = { exports: {} }; __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); if(typeof m.exports === "object") { Object.keys(m.exports).forEach(function(k) { __MODS__[modId].m.exports[k] = m.exports[k]; }); if(m.exports.__esModule) Object.defineProperty(__MODS__[modId].m.exports, "__esModule", { value: true }); } else { __MODS__[modId].m.exports = m.exports; } } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1571306823452, function(require, module, exports) {
+__DEFINE__(1573636568104, function(require, module, exports) {
 
 
 Object.defineProperty(exports, '__esModule', { value: true });
@@ -416,11 +416,11 @@ function combineReducers(reducers) {
   for (var i = 0; i < reducerKeys.length; i++) {
     var key = reducerKeys[i];
 
-    // if (process.env.NODE_ENV !== 'production') {
-    //   if (typeof reducers[key] === 'undefined') {
-    //     warning("No reducer provided for key \"" + key + "\"");
-    //   }
-    // }
+    if (process.env.NODE_ENV !== 'production') {
+      if (typeof reducers[key] === 'undefined') {
+        warning("No reducer provided for key \"" + key + "\"");
+      }
+    }
 
     if (typeof reducers[key] === 'function') {
       finalReducers[key] = reducers[key];
@@ -432,9 +432,9 @@ function combineReducers(reducers) {
 
   var unexpectedKeyCache;
 
-  // if (process.env.NODE_ENV !== 'production') {
-  //   unexpectedKeyCache = {};
-  // }
+  if (process.env.NODE_ENV !== 'production') {
+    unexpectedKeyCache = {};
+  }
 
   var shapeAssertionError;
 
@@ -453,13 +453,13 @@ function combineReducers(reducers) {
       throw shapeAssertionError;
     }
 
-    // if (process.env.NODE_ENV !== 'production') {
-    //   var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
-    //
-    //   if (warningMessage) {
-    //     warning(warningMessage);
-    //   }
-    // }
+    if (process.env.NODE_ENV !== 'production') {
+      var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
+
+      if (warningMessage) {
+        warning(warningMessage);
+      }
+    }
 
     var hasChanged = false;
     var nextState = {};
@@ -667,9 +667,9 @@ function applyMiddleware() {
 
 function isCrushed() {}
 
-// if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
-//   warning('You are currently using minified code outside of NODE_ENV === "production". ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or setting mode to production in webpack (https://webpack.js.org/concepts/mode/) ' + 'to ensure you have the correct code for your production build.');
-// }
+if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
+  warning('You are currently using minified code outside of NODE_ENV === "production". ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or setting mode to production in webpack (https://webpack.js.org/concepts/mode/) ' + 'to ensure you have the correct code for your production build.');
+}
 
 exports.__DO_NOT_USE__ActionTypes = ActionTypes;
 exports.applyMiddleware = applyMiddleware;
@@ -679,6 +679,6 @@ exports.compose = compose;
 exports.createStore = createStore;
 
 }, function(modId) {var map = {}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1571306823452);
+return __REQUIRE__(1573636568104);
 })()
 //# sourceMappingURL=index.js.map
