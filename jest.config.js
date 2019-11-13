@@ -21,5 +21,6 @@ module.exports = {
   },
   transformIgnorePatterns: [
     '/node_modules/'
-  ]
+  ],
+  setupFiles: ['<rootDir>/test/setup'],
 }

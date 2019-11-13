@@ -1,5 +1,5 @@
 /**
- * function: index.spec
+ * function: 需要小程序环境
  * author  : wq
  * update  : 2019/11/12 18:04
  */
@@ -40,16 +40,14 @@ const reducer = combineReducers({ language })
 const createStoreObject = (data = {}) => {
   return createStore(reducer, data)
 }
-const store = createStoreObject()
 
 describe('Index', () => {
-
-  beforeAll(() => {
-    const appConfig = {}
-    App(Provider(store)(appConfig))
-  })
+  let pageConnect
 
   beforeEach(() => {
+    const store = createStoreObject()
+    const appConfig = {}
+    App(Provider(store)(appConfig))
     const mapStateToData = state => {
       return {
         language: state.language
@@ -62,25 +60,51 @@ describe('Index', () => {
   })
   it('Connent Page', () => {
     const pageConfig = {
-      switchTab(e) {
-        const type = e.target.dataset.type
+      switchTab(type) {
         this.languageTypeUpdate(type)
       }
     }
     const page = Page(pageConnect(pageConfig))
     expect(page.data.language).toBeDefined()
+    expect(page.data.language).toEqual({
+      word: '中文'
+    })
+    expect(page.languageTypeUpdate).toBeDefined()
+    page.switchTab('en')
+    expect(page.data.language).toEqual({
+      word: '中文'
+    })
+    setTimeout(() => {
+      expect(page.data.language).toEqual({
+        word: 'English'
+      }, 100)
+    })
     //
   })
   it('Connent Component', () => {
     const pageConfig = {
       isComponent: true,
-      switchTab(e) {
-        const type = e.target.dataset.type
-        this.languageTypeUpdate(type)
+      methods: {
+        switchTab(type) {
+          this.languageTypeUpdate(type)
+        }
       }
     }
     const component = Component(pageConnect(pageConfig))
     expect(component.data.language).toBeDefined()
+    expect(component.data.language).toEqual({
+      word: '中文'
+    })
+    expect(component.languageTypeUpdate).toBeDefined()
+    component.switchTab('en')
+    expect(component.data.language).toEqual({
+      word: '中文'
+    })
+    setTimeout(() => {
+      expect(component.data.language).toEqual({
+        word: 'English'
+      }, 100)
+    })
     //
   })
 })
