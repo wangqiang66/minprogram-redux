@@ -7,11 +7,13 @@ import Provider from './Provider.js'
 import connect from './connect.js'
 import { setApp, getApp } from './app.js'
 import createStore from './createStore'
+import { combineReducers } from 'redux'
 
 module.exports = {
   Provider: Provider,
   connect: connect,
   setApp,
   getApp,
-  createStore
+  createStore,
+  combineReducers
 }

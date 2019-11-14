@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ddjf/minprogram-redux": "^1.0.7"
+    "@ddjf/minprogram-redux": "^1.0.8"
   }
 }

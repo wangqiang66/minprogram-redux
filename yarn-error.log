@@ -16,7 +16,7 @@ Platform:
 npm manifest: 
   {
     "name": "@ddjf/minprogram-redux",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "miniprogram-redux",
     "author": "wangqiang",
     "main": "lib/index",
@@ -39,7 +39,7 @@ npm manifest:
     "scripts": {
       "lint": "eslint lib test/unit",
       "prebuild": "rimraf ./lib && mkdirp ./lib",
-      "build:watch": "webpack -watch",
+      "build:watch": "webpack --watch",
       "build": "webpack",
       "test": "jest",
       "coverage": "codecov"
@@ -58,6 +58,7 @@ npm manifest:
       "@babel/plugin-transform-runtime": "^7.5.5",
       "@babel/preset-env": "^7.5.5",
       "codecov": "^3.5.0",
+      "babel-loader": "^8.0.6",
       "babel-eslint": "^10.0.3",
       "babel-jest": "^24.9.0",
       "jest": "^24.9.0",
@@ -1301,6 +1302,15 @@ Lockfile:
       chalk "^2.4.2"
       slash "^2.0.0"
   
+  babel-loader@^8.0.6:
+    version "8.0.6"
+    resolved "https://registry.npm.taobao.org/babel-loader/download/babel-loader-8.0.6.tgz#e33bdb6f362b03f4bb141a0c21ab87c501b70dfb"
+    dependencies:
+      find-cache-dir "^2.0.0"
+      loader-utils "^1.0.2"
+      mkdirp "^0.5.1"
+      pify "^4.0.1"
+  
   babel-plugin-dynamic-import-node@^2.3.0:
     version "2.3.0"
     resolved "https://registry.npm.taobao.org/babel-plugin-dynamic-import-node/download/babel-plugin-dynamic-import-node-2.3.0.tgz?cache=0&sync_timestamp=1560928040692&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbabel-plugin-dynamic-import-node%2Fdownload%2Fbabel-plugin-dynamic-import-node-2.3.0.tgz#f00f507bdaa3c3e3ff6e7e5e98d90a7acab96f7f"
@@ -2392,7 +2402,7 @@ Lockfile:
       repeat-string "^1.6.1"
       to-regex-range "^2.1.0"
   
-  find-cache-dir@^2.1.0:
+  find-cache-dir@^2.0.0, find-cache-dir@^2.1.0:
     version "2.1.0"
     resolved "https://registry.npm.taobao.org/find-cache-dir/download/find-cache-dir-2.1.0.tgz#8d0f94cd13fe43c6c7c261a0d86115ca918c05f7"
     dependencies:
@@ -3553,7 +3563,7 @@ Lockfile:
     version "2.4.0"
     resolved "https://registry.npm.taobao.org/loader-runner/download/loader-runner-2.4.0.tgz#ed47066bfe534d7e84c4c7b9998c2a75607d9357"
   
-  loader-utils@1.2.3, loader-utils@^1.2.3:
+  loader-utils@1.2.3, loader-utils@^1.0.2, loader-utils@^1.2.3:
     version "1.2.3"
     resolved "https://registry.npm.taobao.org/loader-utils/download/loader-utils-1.2.3.tgz#1ff5dc6911c9f0a062531a4c04b609406108c2c7"
     dependencies:

@@ -12,6 +12,7 @@ module.exports = {
     index: './src/index.js'
   },
   output: {
+    libraryTarget: "umd",
     path: path.resolve(__dirname, 'lib'),
     filename: '[name].js'
   },
@@ -22,5 +23,8 @@ module.exports = {
         loader: 'babel-loader'
       }
     ]
+  },
+  optimization: {
+    minimize: false
   }
 }

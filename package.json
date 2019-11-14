@@ -23,7 +23,7 @@
   "scripts": {
     "lint": "eslint lib test/unit",
     "prebuild": "rimraf ./lib && mkdirp ./lib",
-    "build:watch": "webpack -watch",
+    "build:watch": "webpack --watch",
     "build": "webpack",
     "test": "jest",
     "coverage": "codecov"
