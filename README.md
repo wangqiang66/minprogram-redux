@@ -14,13 +14,33 @@
 
 ## 使用说明
 
-对于redux的基本写法，再此不介绍，仅提供一个demo，主要介绍和小程序有关的使用
+1. 在项目使用中只需要在package.json中依赖@ddjf/minprogram-redux就可以了，不需要重新依赖redux等
+```json
+"dependencies": {
+  "@ddjf/minprogram-redux": "^1.0.9"
+}
+```
 
-首先在App中将redux引入 
+2. redux常规写法一样写action、type、redux
+- 对于redux的combineReducers直接使用"@ddjf/minprogram-redux"里面的
+  ```js
+    import { combineReducers } from '@ddjf/minprogram-redux/index'
+    import * as common from './modules/common'
+    
+    export default combineReducers({ ...common })
+  ```
+- 创建store，可以使用@ddjf/minprogram-redux里面的createStore
+```
+import { createStore } from '@ddjf/minprogram-redux'
+import reducer from './reducers/index'
 
+const preState = {} // preState可以不传，只能只是表示可以加这个参数
+export default createStore(reducer, preState)
+```
+
+3. 在App中将redux引入 
 ```js
 import { Provider } from 'mingrogram-redux/lib/index'
-import { setApp } from 'mingrogram-redux/lib/app'
 import store from './redux/store'
 
 App(Provider(store)({
@@ -29,7 +49,7 @@ App(Provider(store)({
 }))
 ```
 
-Page中调用
+4. Page中调用
 
 ```js
 import { connect } from 'mingrogram-redux/lib/index'
